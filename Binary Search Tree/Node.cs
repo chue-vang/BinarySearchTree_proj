@@ -8,6 +8,6 @@ namespace Binary_Search_Tree
 {
     class Node
     {
-
+           
     }
 }
