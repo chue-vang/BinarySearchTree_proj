@@ -16,6 +16,5 @@ namespace Binary_Search_Tree
         {
             this.data = data;
         }
-
     }
 }
