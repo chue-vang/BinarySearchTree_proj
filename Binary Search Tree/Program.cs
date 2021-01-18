@@ -19,6 +19,7 @@ namespace Binary_Search_Tree
             Node node1 = new Node(1);
             Node node33 = new Node(33);
             Node node7 = new Node(7);
+            Node node3 = new Node(3);
 
             myBST.AddNode(node5);
             myBST.AddNode(node2);
@@ -27,7 +28,14 @@ namespace Binary_Search_Tree
             myBST.AddNode(node1);
             myBST.AddNode(node33);
             myBST.AddNode(node7);
-            Console.WriteLine("TEST COMPLETE");
+            myBST.AddNode(node3);
+
+            myBST.Search(22);
+
+
+
+
+            Console.WriteLine("SEARCH COMPLETE");
             Console.ReadLine();
         }
     }

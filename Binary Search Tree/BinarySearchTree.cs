@@ -12,9 +12,8 @@ namespace Binary_Search_Tree
 
         public BinarySearchTree()
         {
-
+            
         }
-
         public void AddNode(Node nodeToAdd)
         {
             if (RootNode == null)
@@ -55,6 +54,56 @@ namespace Binary_Search_Tree
                     }
                 }
             }
+        }
+
+        public bool Search(int value)
+        {
+            bool searchValue = false;
+            if (RootNode.data == value)
+            {
+                searchValue = true;
+            }
+            else
+            {
+                Node currentNode = RootNode;
+                while (true)
+                {
+                    if (value < currentNode.data)
+                    {
+                        if (currentNode.LeftNode == null)
+                        {
+                            break;
+                        }         
+                        else if (currentNode.LeftNode.data == value)
+                        {
+                            searchValue = true;
+                            break;
+                        }
+                        else
+                        {
+                            currentNode = currentNode.LeftNode;
+                        }
+                     }
+                    else if (value > currentNode.data)
+                    {
+                        if (currentNode.RightNode == null)
+                        {
+                            break;
+                        }
+                        else if ( currentNode.RightNode.data == value)
+                        {
+                            searchValue = true;
+                            break;
+                        }
+                        else
+                        {
+                            currentNode = currentNode.RightNode;
+                        }
+                    }
+                }                 
+            }
+            //return true in the 3rd condition
+            return searchValue;
         }
     }
 }
